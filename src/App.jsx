@@ -1,9 +1,7 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import Hearder from './components/Hearder'
-
+import Logo from './components/Logo'
+import Header from './components/Header'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -11,8 +9,8 @@ function App() {
   return (
     <>
       <div>
-       <Hearder/>
-     </div>
+       <Header/>
+      </div>
     </>
   )
 }
