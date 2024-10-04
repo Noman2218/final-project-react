@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUsers } from '@fortawesome/free-solid-svg-icons';
 import React from 'react'
 
 const PopularCourses = () => {
@@ -5,33 +7,36 @@ const PopularCourses = () => {
         {
             image: "/images/popularcourse01.jpg",
             title: "WordPress for Education",
-            rating: "★★★★☆ (4 votes)",
-            price: "$45",
-            discount: "$68",
+            rating: "★★★★☆",
+            image2: "images/testimonial-3.jpg",
+            name: "Micheak Carrick",
+            designation: "Author",
+
         },
         {
             image: "images/popularcourse02.jpg",
-            title: "The Ultimate Drawing Course",
-            description: "Michelle Golden / Mar 14, 2018",
-            price: "Free",
-            discount: "",
-            rating: "★★★★☆ (4 votes)"
+            title: "Digital Citizenship",
+            rating: "★★★★☆",
+            image2: "images/testimonial-3.jpg",
+            name: "Micheak Carrick",
+            designation: "Author",
         },
         {
             image: "images/popularcourse03.jpg",
-            title: "The Complete Digital Marketing Course",
-            description: "Ms. Lucius / Dec 18, 2018",
-            price: "$55",
-            discount: "$78",
-            rating: "★★★★☆ (4 votes)"
+            title: "Become a PHP Master",
+            rating: "★★★★☆",
+            image2: "images/testimonial-4.jpg",
+            name: "Micheak Carrick",
+            designation: "Author",
         },
         {
             image: "images/popularcourse04.jpg",
-            title: "The Unreal Engine Developer Course",
-            description: "Mr. John Wick / Oct 17, 2018",
-            price: "Free",
-            discount: "",
-            rating: "★★★★☆ (4 votes)"
+            title: "Computer Traning Suite",
+            rating: "★★★★☆",
+            image2: "images/testimonial-4.jpg",
+            name: "Micheak Carrick",
+            designation: "Author",
+
         },
     ];
 
@@ -49,13 +54,24 @@ const PopularCourses = () => {
                                 <img src={card.image} alt={card.title} className="object-cover w-full h-full" />
                             </div>
                             <div className="p-4 text-left">
+                                <div className="text-yellow-500 text-sm">{card.rating}</div>
                                 <h3 className="text-xl font-semibold mb-2">{card.title}</h3>
                                 <p className="text-gray-600 text-sm mb-2">{card.description}</p>
-                                <div className="flex justify-between items-center">
-                                    <span className="text-green-500 text-lg font-bold">{card.price}</span>
-                                    {card.discount && <span className="text-gray-400 line-through">{card.discount}</span>}
+                                <div className='divide-y'>
+                                    <div className="flex gap-10 pt-4 pb-4 items-center">
+                                        <img src={card.image2} alt={card.title} className=" rounded-full h-14 w-auto " />
+                                        <div>
+                                        <h1>{card.name}</h1>
+                                        <p>{card.designation}</p>
+                                        </div>
+                                    </div>
+                                    <div className='divide-y'>
+                                        <div className='pt-4 flex justify-between'>
+                                            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold rounded-full pr-6 pl-6 ">free </button>
+                                            <span><FontAwesomeIcon icon={faUsers} />150</span>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div className="text-yellow-500 text-sm">{card.rating}</div>
                             </div>
                         </div>
                     ))}

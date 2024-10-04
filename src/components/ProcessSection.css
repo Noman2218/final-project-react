@@ -1,0 +1,74 @@
+/* ProcessSection.css */
+.process-section {
+    position: relative;
+    background-image: url('/images/slider-banner3.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+  }
+  
+  h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+  
+  .process-steps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .step {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .icon-container {
+    background-color: white;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+  }
+  
+  .icon-container i {
+    color: #333;
+    font-size: 24px;
+  }
+  
+  .path {
+    margin: 0 -50px; /* Adjust the space between steps */
+  }
+  
+  h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .process-steps {
+      flex-direction: column;
+    }
+  
+    .path {
+      display: none; /* Hide paths on smaller screens */
+    }
+  }
+  
