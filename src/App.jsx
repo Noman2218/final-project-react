@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
-import Logo from './components/Logo'
 import Header from './components/Header'
+import PopularCourses from './components/PopularCourses'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -10,6 +10,7 @@ function App() {
     <>
       <div>
        <Header/>
+       <PopularCourses/>
       </div>
     </>
   )
