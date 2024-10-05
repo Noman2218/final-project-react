@@ -61,8 +61,8 @@ const PopularCourses = () => {
                                     <div className="flex gap-10 pt-4 pb-4 items-center">
                                         <img src={card.image2} alt={card.title} className=" rounded-full h-14 w-auto " />
                                         <div>
-                                        <h1>{card.name}</h1>
-                                        <p>{card.designation}</p>
+                                            <h1>{card.name}</h1>
+                                            <p>{card.designation}</p>
                                         </div>
                                     </div>
                                     <div className='divide-y'>
@@ -75,8 +75,14 @@ const PopularCourses = () => {
                             </div>
                         </div>
                     ))}
+
                 </div>
             </div>
+
+            <div className=' text-center uppercase font-bold text-gray-400-200 ' >
+                <span className='hover:text-blue-400 '><a href="#">load more courses</a></span>
+            </div>
+
         </div>
     )
 }
