@@ -11,7 +11,7 @@ const Registernow = () => {
     return (
         <div className="relative bg-cover bg-center bg-no-repeat py-20 text-white items-center" style={{ backgroundImage: `url('./images/bg121-com.jpg')` }}>
             <div className=' justify-center'>
-                <div className='items-center'>
+                <div className=' pl-16 grid  justify-center'>
                     <p className='uppercase font-semibold'>let get 100s of online course for free before expiring</p>
                     <h1 className='text-4xl md:text-5xl font-bold mb-4 uppercase'>register now!!</h1>
                 </div>

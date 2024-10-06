@@ -3,6 +3,7 @@ import './App.css'
 import Header from './components/Header'
 import PopularCourses from './components/PopularCourses'
 import Registernow from './components/registernow'
+import Instructors from './components/Instructors'
 
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
        <Header/>
        <PopularCourses/>
        <Registernow/>
-       
+       <Instructors/>
       </div>
     </>
   )
