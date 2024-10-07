@@ -1,7 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUsers } from '@fortawesome/free-solid-svg-icons';
 import React from 'react'
-import { Button } from 'antd/es/radio';
 
 const PopularCourses = () => {
     const cards = [
@@ -80,7 +79,7 @@ const PopularCourses = () => {
                 </div>
             </div>
 
-            <div className=' text-center uppercase font-bold text-gray-400-200 ' >
+            <div className=' text-center uppercase font-bold text-gray-400-200 pb-8 ' >
                 <span className='hover:text-blue-400 '><a href="#">load more courses</a></span>
             </div>
 
