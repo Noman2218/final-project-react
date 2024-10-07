@@ -38,12 +38,12 @@ const Header = () => {
         </div>
 
         {/* Right-side Boxes */}
-        <div className="absolute top-20 right-14 flex flex-col space-y-8 z-10">
+        <div className="absolute top-20 right-14 flex flex-col space-y-8 z-10 md:flex flex-row ">
           <div className='flex grid-cols-1 gap-10'>
             {/* Box 1 */}
             <div className="bg-black bg-opacity-50 p-6 rounded-lg flex flex-col items-start text-white w-[300px]">
               <div className="flex items-center">
-                <span className="material-icons text-green-500 mr-3 text-md text-4xl "><FontAwesomeIcon icon={faBookOpen} /></span>
+                <span className="material-icons text-blue-500 mr-3 text-md text-4xl "><FontAwesomeIcon icon={faBookOpen} /></span>
                 <h3 className="font-semibold text-lg">Highly Qualified Instructor</h3>
               </div>
               <p className="mt-2">

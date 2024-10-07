@@ -8,7 +8,7 @@ const Navbar = () => {
             <ul className='items-center flex flex-wrap justify-between'>
                 <li className='mr-16' ><a href="#">Home</a></li>
                 <li className='mr-16' ><a href="#">Features</a></li>
-                <li className='mr-16' ><a href="#">Courses</a></li>
+                <li className='mr-16' >  Courses</li>
                 <li className='mr-16' ><a href="#">Pages</a></li>
                 <div>
                     <input

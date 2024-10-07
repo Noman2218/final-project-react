@@ -9,6 +9,7 @@ import Testimonial from './components/Testimonial'
 import SubscribeSection from './components/SubscribeSection'
 import Registernow from './components/Registernow'
 import Footer from './components/Footer'
+import WordPressForEducation from './components/WordPressForEducation.jsx'
 
 
 
@@ -29,6 +30,7 @@ function App() {
        <Blog/>
        <Testimonial/>
        <SubscribeSection/>
+       <WordPressForEducation/>
        <Footer/>
       </div>
     </>
