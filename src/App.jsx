@@ -7,7 +7,7 @@ import ProcessSection from './components/ProcessSection.jsx'
 import Blog from './components/Blog'
 import Testimonial from './components/Testimonial'
 import SubscribeSection from './components/SubscribeSection'
-import Registernow from './components/registernow'
+import Registernow from './components/Registernow'
 import Footer from './components/Footer'
 
 
