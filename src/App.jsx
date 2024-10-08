@@ -10,6 +10,7 @@ import SubscribeSection from './components/SubscribeSection'
 import Registernow from './components/Registernow'
 import Footer from './components/Footer'
 import WordPressForEducation from './components/WordPressForEducation.jsx'
+import Navbar from './components/Navbar.jsx'
 
 
 
@@ -17,12 +18,12 @@ import WordPressForEducation from './components/WordPressForEducation.jsx'
 
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
       <div>
        <Header/>
+       <Navbar/>
        <PopularCourses/>
        <Registernow/>
        <Instructors/>

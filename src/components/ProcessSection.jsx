@@ -13,7 +13,7 @@ const ProcessSection = () => {
       </p>
 
       {/* Process Steps */}
-      <div className="flex justify-between items-center max-w-5xl mx-auto space-x-8">
+      <div className="grid md:grid-cols-4 grid-cols-1 items-center max-w-5xl mx-auto ">
         {/* Step 1 */}
         <div className="flex flex-col items-center text-center">
           <div className="flex justify-center items-center bg-white text-black rounded-full w-20 h-20 mb-4 shadow-lg">
@@ -24,7 +24,7 @@ const ProcessSection = () => {
         </div>
 
         {/* Step 2 */}
-        <div className="flex flex-col items-center text-center">
+        <div className="flex flex-col items-center text-center p-4">
           <div className="flex justify-center items-center bg-white text-black rounded-full w-20 h-20 mb-4 shadow-lg">
             <FontAwesomeIcon icon={faCopy} className="text-3xl" />
           </div>
@@ -33,7 +33,7 @@ const ProcessSection = () => {
         </div>
 
         {/* Step 3 */}
-        <div className="flex flex-col items-center text-center">
+        <div className="flex flex-col items-center text-center p-4">
           <div className="flex justify-center items-center bg-white text-black rounded-full w-20 h-20 mb-4 shadow-lg">
             <FontAwesomeIcon icon={faFolderOpen} className="text-3xl" />
           </div>
@@ -42,7 +42,7 @@ const ProcessSection = () => {
         </div>
 
         {/* Step 4 */}
-        <div className="flex flex-col items-center text-center">
+        <div className="flex flex-col items-center text-center p-4">
           <div className="flex justify-center items-center bg-white text-black rounded-full w-20 h-20 mb-4 shadow-lg">
             <FontAwesomeIcon icon={faBasketShopping} className="text-3xl" />
           </div>
