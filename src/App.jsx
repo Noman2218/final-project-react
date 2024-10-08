@@ -30,7 +30,6 @@ function App() {
        <Blog/>
        <Testimonial/>
        <SubscribeSection/>
-       <WordPressForEducation/>
        <Footer/>
       </div>
     </>
