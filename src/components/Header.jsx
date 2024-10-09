@@ -23,10 +23,7 @@ const Header = () => {
           alt="sliderbanner"
           className="absolute inset-0 w-full h-full object-cover z-0"
         />
-        <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-8 h-full z-10 px-4 sm:px-8 lg:px-20 py-12">
-         
-          {/* <div className="absolute ml-20 sm:ml-8 flex flex-col items-start
-         justify-center h-full text-left text-white px-12 max-w-[600px] z-10"> */}
+        <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-8 h-full c px-4 sm:px-8 lg:px-20 py-12">
          <div className="flex flex-col justify-center items-start text-white max-w-[600px]">
             <p className="text-white font-bold">
               GCREATING A TRAINING SITE HAS NEVER BEEN
