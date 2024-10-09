@@ -8,8 +8,8 @@ const Navbar = () => {
     <div>
       <ul className='items-center flex flex-wrap justify-between'>
         <li className='mr-16' ><Link to="/">Home</Link></li>
-        <li className='mr-16' ><Link to="/WordPressForEducation">Features</Link></li>
-        <li className='mr-16' ><Link to="/courses">Courses</Link></li>
+        <li className='mr-16' ><Link to="/about">Features</Link></li>
+        <li className='mr-16' ><Link to="/Courses">Courses</Link></li>
         <li className='mr-16' ><Link to="/pages">Pages</Link></li>
         <div>
           <input
