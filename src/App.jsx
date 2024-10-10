@@ -7,15 +7,7 @@ function App() {
   return (
     <>
       <div>
-       <Header/>
-       <PopularCourses/>
-       <Registernow/>
-       <Instructors/>
-       <ProcessSection/>
-       <Blog/>
-       <Testimonial/>
-       <SubscribeSection/>
-       <Footer/>
+       <Home/>
       </div>
     </>
   )
