@@ -17,7 +17,7 @@ const DigitalCitizenship = () => {
         <Navbar />
       </header>
       {/* hero section  */}
-      <div className=" grid-cols-1  relative bg-cover bg-center h-[25vh]">
+      <div className=" grid-cols-1  relative bg-cover bg-center h-[30vh]">
         <img
           src="/images/become-teacher-title.jpg"
           alt="sliderbanner"
@@ -26,7 +26,7 @@ const DigitalCitizenship = () => {
         <div className="relative max-w-7xl mx-auto p-4 sm:px-8 lg: py-12">
           <div className="items-start text-white">
             <h1 className="text-4xl  md:text-6xl font-bold mb-4 uppercase">
-              DesignDevelopmentIT & Software
+              Design,Development,IT & Software
             </h1>
             <p>
               <ul className='flex flex-wrap'>
@@ -180,7 +180,7 @@ const DigitalCitizenship = () => {
         <div className="max-w-7xl mx-auto p-6">
           <h3 className="font-bold text-2xl mb-6">CERTIFICATES</h3>
 
-          <div className="flex justify-between items-start space-x-10">
+          <div className="flex flex-col sm:flex-row justify-between items-center space-x-0 sm:space-x-10">
             {/* Certificate Image */}
             <div className="w-1/2">
               <img src="/images/certificate-completion.jpg" alt="certificate" className="rounded-lg shadow-lg" />

@@ -6,6 +6,7 @@ import { faHouse } from '@fortawesome/free-solid-svg-icons/faHouse';
 import { faPhone } from '@fortawesome/free-solid-svg-icons/faPhone';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 const galleryImages = [
@@ -78,9 +79,13 @@ const Footer = () => {
                     <div className="w-full md:w-1/3">
                         <h3 className="text-xl font-bold mb-4">Courses</h3>
                         <ul className="space-y-2">
-                            <li><a href="#" className="text-gray-400 hover:text-white">WordPress for Education</a></li>
-                            <li><a href="#" className="text-gray-400 hover:text-white">Digital Citizenship</a></li>
-                            <li><a href="#" className="text-gray-400 hover:text-white">Become a PHP Master</a></li>
+                      
+
+
+
+<li><Link to="/courses/wordpress-for-education" className="text-gray-400 hover:text-white">WordPress for Education</Link></li>
+<li><Link to="/courses/digital-citizenship" className="text-gray-400 hover:text-white">Digital Citizenship</Link></li>
+<li><Link to="/courses/become-a-php-master" className="text-gray-400 hover:text-white">Become a php Master</Link></li>
                         </ul>
 
                         <h3 className="text-xl font-bold mt-8 mb-4 ">Gallery</h3>

@@ -186,7 +186,7 @@ const WordPressForEducation = () => {
         <div className="max-w-7xl mx-auto p-6">
           <h3 className="font-bold text-2xl mb-6">CERTIFICATES</h3>
 
-          <div className="flex justify-between items-start space-x-10">
+          <div className="flex flex-col sm:flex-row justify-between items-center space-x-0 sm:space-x-10">
             {/* Certificate Image */}
             <div className="w-1/2">
               <img src="/images/certificate-completion.jpg" alt="certificate" className="rounded-lg shadow-lg" />

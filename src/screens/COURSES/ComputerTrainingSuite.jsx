@@ -7,17 +7,17 @@ import PopularCourses from '../../components/PopularCourses'
 
 
 
-const BecomeaPHPMaster = () => {
+const ComputerTrainingSuite = () => {
     return (
         <div className='align-middle'>
             <header className=" top-0 z-[1] mx-auto flex w-full max-w-7xl flex-wrap items-center
-       justify-between border-b border-gray-100 p-[1.5em] font-sans font-bold uppercase
-       text-text-primary backdrop-blur-[100px] ">
+     justify-between border-b border-gray-100 p-[1.5em] font-sans font-bold uppercase
+     text-text-primary backdrop-blur-[100px] ">
                 <Logo />
                 <Navbar />
             </header>
             {/* hero section  */}
-            <div className=" grid-cols-1  relative bg-cover bg-center h-[25vh]">
+            <div className=" grid-cols-1  relative bg-cover bg-center h-[30vh]">
                 <img
                     src="/images/become-teacher-title.jpg"
                     alt="sliderbanner"
@@ -26,8 +26,7 @@ const BecomeaPHPMaster = () => {
                 <div className="relative max-w-7xl mx-auto p-4 sm:px-8 lg: py-12">
                     <div className="items-start text-white">
                         <h1 className="text-4xl  md:text-6xl font-bold mb-4 uppercase">
-                            Design
-
+                            Design,Technology
                         </h1>
                         <p>
                             <ul className='flex flex-wrap'>
@@ -44,7 +43,7 @@ const BecomeaPHPMaster = () => {
                 <div className="max-w-7xl mx-auto p-4">
                     {/* Header */}
                     <header className="mb-6">
-                        <h1 className="text-4xl font-bold">Become a PHP Master</h1>
+                        <h1 className="text-4xl font-bold">Computer Training Suite</h1>
                         <div className="flex items-center gap-96 ">
                             <div className="flex items-center space-x-2 pt-4">
                                 <img
@@ -53,7 +52,7 @@ const BecomeaPHPMaster = () => {
                                     className="w-10 h-10 rounded-full"
                                 />
                                 <div>
-                                    <p className="text-gray-700 font-medium">Michael Carrick</p>
+                                    <p className="text-gray-700 font-medium">Jonathan Bean</p>
                                     <p className="text-gray-500 text-sm">Author</p>
                                 </div>
                             </div>
@@ -72,7 +71,7 @@ const BecomeaPHPMaster = () => {
                         <main className="lg:col-span-2 space-y-4">
                             {/* Course Image */}
                             <div className="bg-white rounded-lg overflow-hidden shadow-lg">
-                                <img src="/images/2738.jpg" alt="Course" className="w-full" />
+                                <img src="/images/course-img23.jpg" alt="Course" className="w-full" />
                             </div>
 
                             {/* Course Features */}
@@ -105,27 +104,37 @@ const BecomeaPHPMaster = () => {
                             {/* Description Section */}
                             <div className="bg-white p-6 rounded-lg shadow space-y-4">
                                 <p>
-                                    <h4 className='font-bold'>COURSE DESCRIPTION</h4>
+                                    <h4 className='font-bold'>FEATURES</h4>
                                     <br />
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                                    ALISON ABC IT is a free online self-certifiable information technology (IT) course which comprehensively introduces you to IT literacy. ABC IT covers the basic concepts of computing and teaches how computing can be an everyday feature of life and work. It covers basic Microsoft Office computer applications and touch typing training.
                                     <br />
                                     <br />
-                                    <h4 className='font-bold'>CERTIFICATION</h4>
+                                    <h4 className='font-bold'>WHAT YOU WILL LEARN</h4>
                                     <br />
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                                    <br />  <br />
-                                    <h4 className='font-bold'> LEARNING OUTCOMES</h4>
+                                    The course begins by showing you how to use HTML5 elements and CSS3 style sheets for responsive web design. You will learn how to declare a HTML5 document and set up the head and body sections of a web page.
+                                    <br />
+                                    <br />
+                                    You will then learn about a wide range of HTML5 elements and their functions and uses. You will learn how to identify different types of CSS3 selectors and apply these CSS3 selectors to style web pages. You will learn how to list CSS styles in cascading order of precedence. You will learn how to identify and use inline HTML5 elements, and identify and use block style HTML5 elements. You will also learn how to embed a video using the HTML5 video element and add video controls to a video.
+                                    <br />
+                                    You will also learn how to work with HTML5 Canvas and with Scalable Vector Graphics (SVG) in HTML5.
+                                    <br />
+                                    <br />
+                                    <h4 className='font-bold'>High quality syllabi</h4>
                                     <br />
 
-                                    <li>Over 37 lectures and 55.5 hours of content!</li>
-                                    <li>LIVE PROJECT End to End Software Testing Training Included.</li>
-                                    <li>Learn Software Testing and Automation basics from a professional trainer from your own desk.</li>
-                                    <li>Learn Software Testing and Automation basics from a professional trainer from your own desk.</li>
-                                    <li>Best suitable for beginners to advanced level users and who learn faster when demonstrated.</li>
-                                    <li>Course content designed by considering current software testing technology and the job market.</li>
-                                    <li>Practical assignments at the end of every session.</li>
-                                    <li>Practical learning experience with live project work and examples.</li>
+                                    <li>HTML5 which is used to define the content of web pages</li>
+                                    <li>CSS3 which is used to specify the layout and style of web pages</li>
+                                    <li>JavaScript which is used program the behavior of web pages</li>
                                     <br />
+                                    <h4 className='font-bold'>The course then introduces</h4>
+                                    <br />
+                                    The course then introduces you to JavaScript variables and programming concepts such as declaring variables using the var key word and naming JavaScript variables using identifiers.
+
+                                    You will learn about HTML events such as onclick and how JavaScript methods can be used to work with events. You will learn about the different types of conditional statements, their correct syntax and examples of their use. You will learn about JavaScript functions which are blocks of code designed to perform a particular task, and how to write the correct syntax for functions.
+
+                                    You will learn about the different types of JavaScript loops (for, for/in, while and do/while loops) and their correct syntax.
+
+                                    This course will be of great interest to all learners who would like to learn about HTML5, CSS3 and JavaScript coding techniques to enhance both the interactivity and functionality of their web pages.
                                 </p>
                                 {/* Add more course details here */}
                             </div>
@@ -146,10 +155,8 @@ const BecomeaPHPMaster = () => {
                                 <h3>Development (2)</h3>
                                 <h3>IT & Software (3)</h3>
                                 <h3>Marketing (1)</h3>
-                                <h3>Technology (4)
-
-
-                                </h3>              </div>
+                                <h3>Technology (4)</h3>
+                            </div>
 
                             {/* Latest Courses */}
                             <div>
@@ -224,8 +231,7 @@ const BecomeaPHPMaster = () => {
 
             <Footer />
         </div>
-
     )
 }
 
-export default BecomeaPHPMaster;
+export default ComputerTrainingSuite 

@@ -35,7 +35,7 @@ const Courses = () => {
         },
         {
             image: "images/popularcourse04.jpg",
-            title: "Computer Traning Suite",
+            title: "Computer Training Suite",
             rating: "★★★★☆",
             image2: "images/testimonial-4.jpg",
             name: "Micheak Carrick",
@@ -163,7 +163,7 @@ const Courses = () => {
                 {/* Course Cards */}
                 <div className="w-full lg:w-3/4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {currentCards.map((card, index) => (
-                        <Link to={`/courses/${card.title.replace(/\s+/g, '-')}`} key={index}>
+                       <Link to={`/courses/${card.title.replace(/\s+/g, '-')}`} key={index}>
                             <div className="shadow-lg rounded overflow-hidden hover:shadow-2xl transition-shadow duration-300 ease-in-out">
                                 <div className="w-full aspect-w-16 aspect-h-9">
                                     <img src={card.image} alt={card.title} className="object-cover w-full h-full" />

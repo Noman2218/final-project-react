@@ -1,19 +1,20 @@
 import React from 'react'
 import Logo from './Logo';
-import Nav from './Navbar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBookOpen } from '@fortawesome/free-solid-svg-icons/faBookOpen';
+import Navbar from './Navbar';
 
 const Header = () => {
   return (
     <div>
       <div>
-        <header className="sticky top-0 z-[1] mx-auto flex w-full max-w-7xl flex-wrap items-center
-        justify-between border-b border-gray-100 bg-background p-[1.5em] font-sans font-bold uppercase
-        text-text-primary backdrop-blur-[100px] dark:bg-d-background dark:text-d-text-primary">
-
-          <Logo />
-          <Nav />
+        <header className=" top-0 z-[1] mx-auto flex  w-full max-w-7xl items-center 
+        justify-between border-b border-gray-100 bg-background p-[1.5em] 
+        font-sans font-bold uppercase text-text-primary ">
+          <div className=" items-center"> 
+            <Logo/> 
+          </div>
+          <Navbar /> 
         </header>
       </div>
 
@@ -24,7 +25,7 @@ const Header = () => {
           className="absolute inset-0 w-full h-full object-cover z-0"
         />
         <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-8 h-full c px-4 sm:px-8 lg:px-20 py-12">
-         <div className="flex flex-col justify-center items-start text-white max-w-[600px]">
+          <div className="flex flex-col justify-center items-start text-white max-w-[600px]">
             <p className="text-white font-bold">
               GCREATING A TRAINING SITE HAS NEVER BEEN
             </p>
