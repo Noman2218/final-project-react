@@ -7,7 +7,7 @@ import PopularCourses from '../../components/PopularCourses'
 
 
 
-const WordPressForEducation = () => {
+const DigitalCitizenship = () => {
   return (
     <div className='align-middle'>
       <header className=" top-0 z-[1] mx-auto flex w-full max-w-7xl flex-wrap items-center
@@ -19,14 +19,14 @@ const WordPressForEducation = () => {
       {/* hero section  */}
       <div className=" grid-cols-1  relative bg-cover bg-center h-[25vh]">
         <img
-          src="images/become-teacher-title.jpg"
+          src="/images/become-teacher-title.jpg"
           alt="sliderbanner"
           className="absolute  w-full h-full object-cover"
         />
         <div className="relative max-w-7xl mx-auto p-4 sm:px-8 lg: py-12">
           <div className="items-start text-white">
             <h1 className="text-4xl  md:text-6xl font-bold mb-4 uppercase">
-              Business,Technology
+              DesignDevelopmentIT & Software
             </h1>
             <p>
               <ul className='flex flex-wrap'>
@@ -43,16 +43,17 @@ const WordPressForEducation = () => {
         <div className="max-w-7xl mx-auto p-4">
           {/* Header */}
           <header className="mb-6">
-            <h1 className="text-4xl font-bold">WordPress for Education</h1>
+            <h1 className="text-4xl font-bold">Digital Citizenship
+            </h1>
             <div className="flex items-center gap-96 ">
               <div className="flex items-center space-x-2 pt-4">
                 <img
-                  src="images/testimonial-3.jpg"
+                  src="/images/testimonial-3.jpg"
                   alt="Instructor"
                   className="w-10 h-10 rounded-full"
                 />
                 <div>
-                  <p className="text-gray-700 font-medium">Michael Carrick</p>
+                  <p className="text-gray-700 font-medium">Jonathan Bean</p>
                   <p className="text-gray-500 text-sm">Author</p>
                 </div>
               </div>
@@ -71,7 +72,7 @@ const WordPressForEducation = () => {
             <main className="lg:col-span-2 space-y-4">
               {/* Course Image */}
               <div className="bg-white rounded-lg overflow-hidden shadow-lg">
-                <img src="/images/edusite-class.jpg" alt="Course" className="w-full" />
+                <img src="/images/post-img3.jpg" alt="Course" className="w-full" />
               </div>
 
               {/* Course Features */}
@@ -105,34 +106,29 @@ const WordPressForEducation = () => {
               <div className="bg-white p-6 rounded-lg shadow space-y-4">
                 <p>
 
-                  Author Chris Mattia explores the best WordPress site designs and plugins for educators, and strategies for teaching online and engaging students in a digital environment. The ideas in this course can apply to face-to-face, blended, and 100% online classes. Start watching to learn how to design an open, connected course site; organize the flow of course content; and syndicate content from student sites.
+                  What does it mean to be a digital citizen? Good digital citizens use technology in appropriate and respectful ways, and build community in every corner of the Internet. In 21st century education, helping students become good digital citizens—who communicate, search, and stay safe online—is part of every educator’s responsibilities.
+                  <br />
+                  <br />
+
+                  This course helps teachers and students understand the ideas and areas of digital citizenship. Oliver Schinkten describes the impact of our digital footprint. He shows how to participate in online communities, help students deal with cyberbullying, keep computers free of viruses and malware, and safely shop online.
+                  <br />
+                  <br />
+                  The overall focus of this course is on educators and tips for teaching digital citizenship. But if you use the Internet for any reason—for communication, playing games, online shopping, interacting within communities, or any other reason—it is important to understand digital citizenship. Understanding your rights and responsibilities will help you stay safe and have a better experience online.
                   <br />
                   <br />
                   <h4 className='font-bold'>Topics include</h4>
                   <br />
 
-                  <li>Improving WordPress accessibility</li>
-                  <li> Configuring WordPress for a class</li>
-                  <li>Designing a course site</li>
-                  <li>Strategies for choosing a theme</li>
-                  <li>Creating pages, categories, and menus</li>
-                  <li>Managing the flow of course content</li>
-                  <li>Subscribing to student blog feeds</li>
-                  <li>Password-protecting posts</li>
+                  <li>Creating a positive digital footprint</li>
+                  <li>Addressing cyberbullying</li>
+                  <li>Joining online communities</li>
+                  <li>Finding solutions for the digital divide</li>
+                  <li>Conducting online research</li>
+                  <li>Maintaining privacy online</li>
+                  <li>Protecting yourself from viruses and malware</li>
+                  <li>Buying products online</li>
+                  <li>Engaging with online reviews</li>
                   <br />
-
-                  <h2 className='font-bold'>The course then introduces</h2>
-
-                  <br />
-
-                  The course then introduces you to JavaScript variables and programming concepts such as declaring variables using the var key word and naming JavaScript variables using identifiers.
-                  <br /> <br />
-                  You will learn about HTML events such as onclick and how JavaScript methods can be used to work with events. You will learn about the different types of conditional statements, their correct syntax and examples of their use. You will learn about JavaScript functions which are blocks of code designed to perform a particular task, and how to write the correct syntax for functions.
-                  <br /><br />
-                  You will learn about the different types of JavaScript loops (for, for/in, while and do/while loops) and their correct syntax.
-                  <br /><br />
-                  This course will be of great interest to all learners who would like to learn about HTML5, CSS3 and JavaScript coding techniques to enhance both the interactivity and functionality of their web pages.
-
 
                 </p>
                 {/* Add more course details here */}
@@ -154,10 +150,8 @@ const WordPressForEducation = () => {
                 <h3>Development (2)</h3>
                 <h3>IT & Software (3)</h3>
                 <h3>Marketing (1)</h3>
-                <h3>Technology (4)
-
-
-                </h3>              </div>
+                <h3>Technology (4)</h3>
+              </div>
 
               {/* Latest Courses */}
               <div>
@@ -225,10 +219,10 @@ const WordPressForEducation = () => {
             <p>Designing for the Web, Learning Web Design, Scalable and Modular Architecture for CSS</p>
           </div>
         </div>
-        <PopularCourses />  
+        <PopularCourses />
       </div>
 
-      
+
 
       <Footer />
     </div>
@@ -236,4 +230,4 @@ const WordPressForEducation = () => {
   )
 }
 
-export default WordPressForEducation
+export default DigitalCitizenship

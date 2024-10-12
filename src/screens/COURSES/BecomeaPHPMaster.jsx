@@ -7,7 +7,7 @@ import PopularCourses from '../../components/PopularCourses'
 
 
 
-const WordPressForEducation = () => {
+const BecomeaPHPMaster = () => {
   return (
     <div className='align-middle'>
       <header className=" top-0 z-[1] mx-auto flex w-full max-w-7xl flex-wrap items-center
@@ -236,4 +236,4 @@ const WordPressForEducation = () => {
   )
 }
 
-export default WordPressForEducation
+export default BecomeaPHPMaster;

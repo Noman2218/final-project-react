@@ -27,7 +27,7 @@ const Footer = () => {
                 <div className="flex flex-wrap justify-between mb-8">
                     {/* Company Info */}
                     <div className="w-full md:w-1/3 mb-4 md:mb-0">
-                        <h2 className="text-3xl font-bold mb-2"><img src="images/udetor-logo.png" alt="mainlogo" /></h2>
+                        <h2 className="text-3xl font-bold mb-2"><img src="/images/udetor-logo.png" alt="mainlogo" /></h2>
                         <p className="text-gray-400 mb-4 text-balance">
                             Udetor is designed to process the full and perfect similar to a high-end technology product.
                         </p>
@@ -88,8 +88,8 @@ const Footer = () => {
                             {galleryImages.map((image, index) => (
                                 <img
                                     key={index}
-                                    src={`images/${image}`}
-                                    alt={`Gallery ${index + 1}`}
+                                    src={`/images/${image}`}
+                                    alt={`/Gallery ${index + 1}`}
                                     className="w-full h-28 object-cover"
                                 />
                             ))}

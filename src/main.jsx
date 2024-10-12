@@ -1,46 +1,17 @@
-// import { StrictMode } from 'react'
-// import { createRoot } from 'react-dom/client'
-// import App from './App.jsx'
-// import './index.css'
-// import { BrowserRouter, createBrowserRouter, RouterProvider } from 'react-router-dom'
-// import WordPressForEducation from './components/WordPressForEducation.jsx'
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import App from './App.jsx';
+import './index.css';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Courses from './screens/COURSES/Courses.jsx';
 
+import DigitalCitizenship from './screens/COURSES/DigitalCitizenship.jsx';
+import PopularCourses from './components/PopularCourses.jsx';
+import WordPressForEducation from './screens/COURSES/WordPressForEducation.jsx';
+import BecomeaPHPMaster from './screens/COURSES/BecomeaPHPMaster.jsx';
+// import BecomeAPHPMaster from './screens/COURSES/BecomeAPHPMaster.jsx';
+// import ComputerTrainingSuite from './screens/COURSES/ComputerTrainingSuite.jsx';
 
-
-
-// const router = createBrowserRouter([
-//   {
-//     path: "/Courses",
-//     element: (
-//      <WordPressForEducation/>
-//     ),
-//   },
-//   {
-//     path: "about",
-//     element: <div>About</div>,
-//   },
-
-
-// ]);
-
-
-
-// createRoot(document.getElementById('root')).render(
-//   <StrictMode>
-//     <BrowserRouter>
-//       {/* <RouterProvider router={router} /> */}
-//       <App />
-//     </BrowserRouter>
-//   </StrictMode>,
-// )
-
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
-import { BrowserRouter, createBrowserRouter, RouterProvider } from 'react-router-dom'
-import WordPressForEducation from './screens/COURSES/WordPressForEducation.jsx' 
-import Courses from './screens/COURSES/Courses.jsx'
 
 const router = createBrowserRouter([
   {
@@ -49,25 +20,40 @@ const router = createBrowserRouter([
   },
   {
     path: "/Courses",
-    element: (
-     <Courses/>
-    ),
+    element: <Courses />,
   },
   {
-    path: "/about",
-    element: 
-    (
-      <WordPressForEducation/>
-    )
+    path: "/popular-courses",  // Route for PopularCourses
+    element: <PopularCourses />,
   },
   {
-    path: "/about",
-    element: <div>About</div>,
+    path: "/courses/wordpress-for-education",
+    element: <WordPressForEducation />,
   },
+  {
+    path: "/courses/digital-citizenship",
+    element: <DigitalCitizenship />,
+  },
+
+  {
+    path: "/popular-courses/load more courses",
+    element: <Courses />,
+  },
+
+
+    {
+      path: "/courses/become-a-php-master",
+      element: <BecomeaPHPMaster />,
+    },
+  // {
+  //   path: "/courses/computer-training-suite",
+  //   element: <ComputerTrainingSuite />,
+  // },
+
 ]);
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <RouterProvider router={router} />
   </StrictMode>,
-)
+);
