@@ -1,91 +1,97 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Button, Modal } from 'antd';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import Logo from '../components/Logo';
 
-
-
-
-
-
-
-
 const ContactPage = () => {
+    const [result, setResult] = useState("");
+    const [open, setOpen] = useState(false);  // State for controlling modal visibility
+    const [confirmLoading, setConfirmLoading] = useState(false);
 
-    const [result, setResult] = React.useState("");
+    const showModal = (message) => {
+        setResult(message);
+        setOpen(true);  // Open modal when called
+    };
+
+    const handleOk = () => {
+        setConfirmLoading(true);
+        setTimeout(() => {
+            setOpen(false);  // Close modal after 2 seconds
+            setConfirmLoading(false);
+        }, 200);
+    };
+
+    const handleCancel = () => {
+        setOpen(false);  // Close modal when cancelled
+    };
 
     const onSubmit = async (event) => {
         event.preventDefault();
-        setResult("Sending....");
         const formData = new FormData(event.target);
 
         formData.append("access_key", "0898a4ca-dc8c-46af-8018-c3f4a3b18248");
 
-        const response = await fetch("https://api.web3forms.com/submit", {
-            method: "POST",
-            body: formData
-        });
+        try {
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
+            });
 
-        const data = await response.json();
+            const data = await response.json();
 
-        if (data.success) {
-            setResult("Form Submitted Successfully");
-            event.target.reset();
-        } else {
-            console.log("Error", data);
-            setResult(data.message);
+            if (data.success) {
+                showModal("Your message has been sent.");  // Show modal on successful submission
+                event.target.reset();
+            } else {
+                showModal("Something went wrong: " + data.message);  // Show modal with error message
+            }
+        } catch (error) {
+            showModal("An error occurred. Please try again later.");
         }
     };
 
-
     return (
         <div>
-            <header className=" top-0 z-[1] mx-auto flex w-full max-w-7xl flex-wrap items-center
-        justify-between border-b border-gray-100 p-[1.5em] font-sans font-bold uppercase
-        text-text-primary backdrop-blur-[100px] ">
+            <header className="top-0 z-[1] mx-auto flex w-full max-w-7xl flex-wrap items-center justify-between border-b border-gray-100 p-[1.5em] font-sans font-bold uppercase text-text-primary backdrop-blur-[100px] ">
                 <Logo />
                 <Navbar />
             </header>
-            {/* hero section  */}
-            <div className=" grid-cols-1  relative bg-cover bg-center h-[30vh]">
+
+            {/* Hero section */}
+            <div className="grid-cols-1 relative bg-cover bg-center h-[30vh]">
                 <img
                     src="/images/become-teacher-title.jpg"
                     alt="sliderbanner"
-                    className="absolute  w-full h-full object-cover"
+                    className="absolute w-full h-full object-cover"
                 />
                 <div className="relative max-w-7xl mx-auto p-4 sm:px-8 lg: py-12">
                     <div className="items-start text-white">
-                        <h1 className="text-4xl  md:text-6xl font-bold mb-4 uppercase">
-                            Contact US
-                        </h1>
-                        <p>
-                            <ul className='flex flex-wrap'>
-                                <li className='mr-4 list-none' ><Link to="/">Home</Link></li>
-                                <li className='mr-4 list-none' ><Link to="/Courses">Courses</Link></li>
-                            </ul>
-                        </p>
+                        <h1 className="text-4xl md:text-6xl font-bold mb-4 uppercase">Contact Us</h1>
+                        <ul className="flex flex-wrap">
+                            <li className="mr-4 list-none"><Link to="/">Home</Link></li>
+                            <li className="mr-4 list-none"><Link to="/Courses">Courses</Link></li>
+                        </ul>
                     </div>
                 </div>
             </div>
-            {/* hero section end */}
+
+            {/* Contact Form */}
             <div className="max-w-7xl mx-auto p-6">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    {/* Come To Section */}
                     <div className="bg-white p-4 rounded-lg shadow">
                         <h2 className="text-lg font-bold">COME TO</h2>
                         <p>99 Barnard St - Suite 111</p>
                         <p>United Kingdom</p>
                     </div>
 
-                    {/* Call To Section */}
                     <div className="bg-white p-4 rounded-lg shadow">
                         <h2 className="text-lg font-bold">CALL TO</h2>
                         <p>Local: 1-800-123-hello</p>
                         <p>Mobile: 1-800-123-hello</p>
                     </div>
 
-                    {/* Connect To Section */}
                     <div className="bg-white p-4 rounded-lg shadow">
                         <h2 className="text-lg font-bold">CONNECT TO</h2>
                         <p>info@edue.com</p>
@@ -101,7 +107,7 @@ const ContactPage = () => {
                             <input
                                 type="text"
                                 id="name"
-                                name="name"  // Add this line
+                                name="name"
                                 className="border rounded w-full p-2"
                                 required
                             />
@@ -111,7 +117,7 @@ const ContactPage = () => {
                             <input
                                 type="email"
                                 id="email"
-                                name="email"  // Add this line
+                                name="email"
                                 className="border rounded w-full p-2"
                                 required
                             />
@@ -120,19 +126,28 @@ const ContactPage = () => {
                             <label htmlFor="message" className="block mb-1">How can we help?*</label>
                             <textarea
                                 id="message"
-                                name="message"  // Add this line
+                                name="message"
                                 className="border rounded w-full p-2"
                                 rows="4"
                                 required
                             ></textarea>
                         </div>
-
                         <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded">
                             Submit
                         </button>
                     </form>
-                    <span>{result}</span>
                 </div>
+
+                {/* Modal for form submission result */}
+                <Modal
+                    title="Message Status"
+                    open={open}
+                    onOk={handleOk}
+                    confirmLoading={confirmLoading}
+                    onCancel={handleCancel}
+                >
+                    <p>{result}</p>
+                </Modal>
 
                 {/* Map Section */}
                 <div className="my-8">
@@ -148,11 +163,9 @@ const ContactPage = () => {
                         ></iframe>
                     </div>
                 </div>
-
             </div>
             <Footer />
         </div>
-
     );
 };
 
