@@ -16,7 +16,7 @@ const ProcessSection = () => {
       <div className="grid md:grid-cols-4 grid-cols-1 items-center max-w-5xl mx-auto ">
         {/* Step 1 */}
         <div className="flex flex-col items-center text-center">
-          <div className="flex justify-center items-center bg-white text-black rounded-full w-20 h-20 mb-4 shadow-lg hover:bg-blue-400  hover:text-white">
+          <div className="flex justify-center items-center bg-white text-black rounded-full w-20 h-20 mb-4 shadow-lg hover:bg-blue-400  hove  r:text-white">
             <FontAwesomeIcon icon={faFile} className="text-3xl" />
           </div>
           <h3 className="text-lg font-semibold">Select for your course</h3>
