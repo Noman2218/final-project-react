@@ -42,8 +42,8 @@ const ContactPage = () => {
     return (
         <div>
             <header className=" top-0 z-[1] mx-auto flex w-full max-w-7xl flex-wrap items-center
-     justify-between border-b border-gray-100 p-[1.5em] font-sans font-bold uppercase
-     text-text-primary backdrop-blur-[100px] ">
+        justify-between border-b border-gray-100 p-[1.5em] font-sans font-bold uppercase
+        text-text-primary backdrop-blur-[100px] ">
                 <Logo />
                 <Navbar />
             </header>
@@ -101,6 +101,7 @@ const ContactPage = () => {
                             <input
                                 type="text"
                                 id="name"
+                                name="name"  // Add this line
                                 className="border rounded w-full p-2"
                                 required
                             />
@@ -110,27 +111,22 @@ const ContactPage = () => {
                             <input
                                 type="email"
                                 id="email"
+                                name="email"  // Add this line
                                 className="border rounded w-full p-2"
                                 required
-                            />
-                        </div>
-                        <div className="mb-4">
-                            <label htmlFor="title" className="block mb-1 ">Title</label>
-                            <input
-                                type="text"
-                                id="title"
-                                className="border rounded w-full p-2"
                             />
                         </div>
                         <div className="mb-4">
                             <label htmlFor="message" className="block mb-1">How can we help?*</label>
                             <textarea
                                 id="message"
+                                name="message"  // Add this line
                                 className="border rounded w-full p-2"
                                 rows="4"
                                 required
                             ></textarea>
                         </div>
+
                         <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded">
                             Submit
                         </button>
