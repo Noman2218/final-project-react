@@ -5,7 +5,40 @@ import Navbar from '../components/Navbar';
 import Logo from '../components/Logo';
 
 
+
+
+
+
+
+
 const ContactPage = () => {
+
+    const [result, setResult] = React.useState("");
+
+    const onSubmit = async (event) => {
+        event.preventDefault();
+        setResult("Sending....");
+        const formData = new FormData(event.target);
+
+        formData.append("access_key", "0898a4ca-dc8c-46af-8018-c3f4a3b18248");
+
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+            setResult("Form Submitted Successfully");
+            event.target.reset();
+        } else {
+            console.log("Error", data);
+            setResult(data.message);
+        }
+    };
+
+
     return (
         <div>
             <header className=" top-0 z-[1] mx-auto flex w-full max-w-7xl flex-wrap items-center
@@ -62,7 +95,7 @@ const ContactPage = () => {
 
                 <div className="my-8">
                     <h2 className="text-lg font-bold">Contact Form</h2>
-                    <form className="bg-white p-6 rounded-lg shadow mt-4">
+                    <form className="bg-white p-6 rounded-lg shadow mt-4" onSubmit={onSubmit}>
                         <div className="mb-4">
                             <label htmlFor="name" className="block mb-1">Name*</label>
                             <input
@@ -82,7 +115,7 @@ const ContactPage = () => {
                             />
                         </div>
                         <div className="mb-4">
-                            <label htmlFor="title" className="block mb-1">Title</label>
+                            <label htmlFor="title" className="block mb-1 ">Title</label>
                             <input
                                 type="text"
                                 id="title"
@@ -102,6 +135,7 @@ const ContactPage = () => {
                             Submit
                         </button>
                     </form>
+                    <span>{result}</span>
                 </div>
 
                 {/* Map Section */}
