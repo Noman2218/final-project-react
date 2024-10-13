@@ -1,87 +1,45 @@
-import { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
-import App from './App.jsx';
-import './index.css';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Courses from './screens/COURSES/Courses.jsx';
-
-import DigitalCitizenship from './screens/COURSES/DigitalCitizenship.jsx';
-import WordPressForEducation from './screens/COURSES/WordPressForEducation.jsx';
-import BecomeaPHPMaster from './screens/COURSES/BecomeaPHPMaster.jsx';
-import ComputerTrainingSuite from './screens/COURSES/ComputerTrainingSuite.jsx';
-import About from './screens/About.jsx';
-import LearningSnagitforMac from './screens/COURSES/LearningSnagitforMac.jsx';
-import DiplomainHTML5 from './screens/COURSES/DiplomainHTML5.jsx';
-
-import ITCapstoneWrittenProject from './screens/COURSES/ITCapstoneWrittenProject.jsx';
-import IntroductiontoIT from './screens/COURSES/IntroductiontoIT.jsx';
-import ContactPage from './screens/ContactPage.jsx';
-import IntroductiontoCloudComputing from './screens/COURSES/introductiontoCloudComputing.jsx';
-
-
+import * as React from "react";
+import * as ReactDOM from "react-dom/client";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import "./index.css";
+import App from "./App";
+import Home from "./pages/Home.jsx";
+import Blogs from "./pages/Blogs.jsx";
+import About from "./pages/About.jsx";
+import Contact from "./pages/Contact.jsx";
+import Services from "./pages/Services.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/blogs",
+        element: <Blogs />,
+      },
+      {
+        path: "/about",
+        element: <About />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
+      },
+      {
+        path: "/services",
+        element: <Services />,
+      },
+    ],
   },
-  {
-    path: "/courses",
-    element: <Courses />,
-  },
-  {
-    path: "/about",
-    element: <About/>,
-  },
-  {
-    path: "/Contact",
-    element: <ContactPage/>
-  },
-  {
-    path: "/courses/wordpress-for-education",
-    element: <WordPressForEducation />,
-  },
-  {
-    path: "/courses/digital-citizenship",
-    element: <DigitalCitizenship />,
-  },
-  {
-    path: "/courses/become-a-php-master",
-    element: <BecomeaPHPMaster />,
-  },
-  {
-    path: "/courses/computer-training-suite",
-    element: <ComputerTrainingSuite />,
-  },
-  {
-    path: "/courses/learning-snagit-for-mac",
-    element: <LearningSnagitforMac/>,
-  },
-  {
-    path: "/courses/Diploma-in-HTML5,-CSS3",
-    element: <DiplomainHTML5/>,
-  },
-  {
-    path: "courses/Introduction-to-Cloud-Computing",
-    element: <IntroductiontoCloudComputing/>,
-  },
-  {
-    path: "courses/IT-Capstone-Written-Project",
-    element: <ITCapstoneWrittenProject/>
-  },
-  {
-    path: "courses/Introduction-to-IT",
-    element: <IntroductiontoIT/>
-  },
-
 ]);
 
-      
-
-
-
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
     <RouterProvider router={router} />
-  </StrictMode>,
+  </React.StrictMode>
 );
