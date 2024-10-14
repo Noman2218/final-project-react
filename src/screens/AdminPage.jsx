@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Modal, Button } from 'antd'; // Import Modal and Button from Ant Design
 import 'antd/dist/reset.css'; // Import Ant Design styles (optional)
-import Header from '../components/Header';
 import Logo from '../components/Logo';
 import Navbar from '../components/Navbar';
 
@@ -17,7 +16,7 @@ const AdminPage = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/users');
+        const response = await axios.get('http://localhost:3000/users');
         setUsers(response.data);
       } catch (error) {
         console.error('Error fetching users:', error);
@@ -36,7 +35,7 @@ const AdminPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/users', formData);
+      const response = await axios.post('http://localhost:3000/users', formData);
       setUsers([...users, response.data]);
       setFormData({ name: '', email: '' });
       // Show success modal instead of alert
@@ -55,7 +54,7 @@ const AdminPage = () => {
   // Handle user deletion (DELETE request)
   const handleDelete = async () => {
     try {
-      await axios.delete(`http://localhost:5000/users/${userToDelete.id}`);
+      await axios.delete(`http://localhost:3000/users/${userToDelete.id}`);
       setUsers(users.filter(user => user.id !== userToDelete.id));
       setIsDeleteModalVisible(false);
     } catch (error) {

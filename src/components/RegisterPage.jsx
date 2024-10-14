@@ -13,7 +13,7 @@ const RegisterPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/users', formData);
+      await axios.post('http://localhost:3000/users', formData);
       alert('User registered successfully');
       navigate('/');
     } catch (error) {
