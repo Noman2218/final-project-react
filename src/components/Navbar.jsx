@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass, faUser, faBars, faTimes } from '@fortawesome/free-solid-svg-icons'; // Import the correct icons
 
@@ -9,6 +9,17 @@ const Navbar = () => {
   const toggleNavBar = () => {
     setIsOpen(!isOpen);
   };
+
+
+
+  const navigate = useNavigate  (); // Initialize useNavigate
+
+  // Function to handle the button click and redirect to /register
+  const handleUserIconClick = () => {
+    navigate('/register'); // Redirect to the registration form page
+  };
+
+
 
   return (
     <div>
@@ -27,6 +38,9 @@ const Navbar = () => {
             <li className="mr-16">
               <Link to="/Contact">Contact Us</Link>
             </li>
+            <li className="mr-16">
+              <Link to="/admin">Admin</Link>
+            </li>
           </ul>
         </div>
         <div className="flex items-center w-full md:w-auto">  {/* Make the container responsive */}
@@ -38,7 +52,7 @@ const Navbar = () => {
           <button className="bg-blue-500 text-white px-3 py-2">
             <FontAwesomeIcon icon={faMagnifyingGlass} />
           </button>
-          <button className="p-4">
+          <button className="p-4" onClick={handleUserIconClick}>
             <FontAwesomeIcon icon={faUser} />
           </button>
           <button
